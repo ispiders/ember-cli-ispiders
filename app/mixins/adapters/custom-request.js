@@ -86,6 +86,7 @@ export default Ember.Mixin.create({
             hash.context = this;
 
             var headers = this.get('headers') || {};
+
             headers = Ember.copy(headers, true);
             hash.headers = Object.assign(headers, hash.headers);
 
