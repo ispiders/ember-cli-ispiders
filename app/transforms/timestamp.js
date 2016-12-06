@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-var boundary = 1000000000;
+var boundary = 10000000000;
 
 export default DS.Transform.extend({
 
