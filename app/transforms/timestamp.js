@@ -6,6 +6,10 @@ export default DS.Transform.extend({
 
     deserialize: function (timestamp) {
 
+        if (timestamp === null || typeof timestamp === 'undefined') {
+            return timestamp;
+        }
+
         var unixTimestap = Number(timestamp);
 
         if (isNaN(unixTimestap)) {
@@ -26,6 +30,10 @@ export default DS.Transform.extend({
     },
 
     serialize: function (timestamp) {
+
+        if (timestamp === null || typeof timestamp === 'undefined') {
+            return timestamp;
+        }
 
         return parseInt(timestamp / 1000);
     }
