@@ -39,6 +39,6 @@ export default Ember.Service.extend({
     },
 
     serverTime: Ember.computed('_timestamp', function () {
-        return parseInt(window.sessionStorage.getItem('local-timestamp-delta') || 0) + Date.now();
+        return (parseInt(window.sessionStorage.getItem('local-timestamp-delta')) || 0) + Date.now();
     }).readOnly()
 });
