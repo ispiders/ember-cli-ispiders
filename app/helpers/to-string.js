@@ -15,7 +15,15 @@ export default Ember.Helper.helper(function ([input, def], hash) {
     var str = (!input && input !== 0) ? def : input;
 
     if (Number(hash.maxLength)) {
-        str = str.substr(0, Number(hash.maxLength));
+
+        var len = parseInt(hash.maxLength);
+
+        if (len > 0) {
+            str = str.substr(0, len);
+        }
+        else {
+            str = str.substr(len);
+        }
     }
 
     return str;
