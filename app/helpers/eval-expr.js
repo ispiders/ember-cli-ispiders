@@ -9,11 +9,11 @@ export default Ember.Helper.helper(function ([left, oparator, right]) {
   		case '&&':
   			return left && right;
 
-        case '>':
-            return left > right;
+      case '>':
+          return left > right;
 
-        case '<':
-            return left < right;
+      case '<':
+          return left < right;
 
   		default:
   			return right;
