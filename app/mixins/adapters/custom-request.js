@@ -58,11 +58,13 @@ export default Ember.Mixin.create({
 
     handleResponse: function (status, headers, payload, requestData) {
 
-        if (payload.error) {
-            payload = {errors: [payload.error]};
-        }
-        else {
-            delete payload.error;
+        if (payload) {
+            if (payload.error) {
+                payload = {errors: [payload.error]};
+            }
+            else {
+                delete payload.error;
+            }
         }
 
         return this._super(status, headers, payload, requestData);
