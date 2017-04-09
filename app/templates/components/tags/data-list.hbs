@@ -1,0 +1,9 @@
+{{#each content as |option|}}
+    <option value="{{get option optionValuePath}}">
+        {{#if yield}}
+            {{yield option this}}
+        {{else}}
+            {{get option optionLabelPath}}
+        {{/if}}
+    </option>
+{{/each}}
