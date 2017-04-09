@@ -10,11 +10,6 @@ export default Ember.Component.extend({
     content: Ember.computed.alias('targetObject.datalist'),
     selectedIndex: -1,
 
-    test: Ember.observer('content.[]', function () {
-
-        console.error(this.get('content'))
-    }),
-
     bindComponent: Ember.on('didInsertElement', function () {
 
         this.get('element').emberComponent = this;
