@@ -23,6 +23,7 @@ export default DS.Transform.extend({
             }
             else {
                 console.warn(json, ' can not be convert to a valid Array');
+
                 return '[]';
             }
         }

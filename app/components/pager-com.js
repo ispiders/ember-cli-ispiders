@@ -52,7 +52,7 @@ export default Ember.Component.extend({
      */
     pages: Ember.computed('lastPage', 'pagination.page', function () {
         var last = this.get('lastPage'),
-            current = this.get('pagination.page'),
+            current = parseInt(this.get('pagination.page')),
             maxPageCount = 9,
             pagesArray = [];
 
@@ -78,7 +78,7 @@ export default Ember.Component.extend({
         for (var i = start; i <= end; i++) {
             pagesArray.push({
                 page: i,
-                active: (current == i) ? 'active' : false
+                active: (current === i) ? 'active' : false
             });
         }
 

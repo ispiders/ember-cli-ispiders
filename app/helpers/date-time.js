@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+var moment = window.moment;
+
 moment.locale('zh-cn', {
     relativeTime : {
         future: '%s后',
