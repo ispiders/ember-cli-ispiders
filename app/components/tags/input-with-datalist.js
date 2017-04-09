@@ -53,8 +53,6 @@ export default Ember.TextField.extend({
 
         if (this.get('datalistComponent')) {
 
-            this.get('datalistComponent').set('content', this.get('datalist'));
-
             if (Ember.isEmpty(this.get('datalist'))) {
                 this.hideDatalist();
             }
